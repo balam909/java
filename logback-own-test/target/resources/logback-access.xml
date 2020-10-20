@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configuration>
+    <!-- always a good activate OnConsoleStatusListener -->
+    <statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener" />
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%h %l %u %user %date "%r" %s %b</pattern>
+        </encoder>
+    </appender>
+
+    <appender-ref ref="STDOUT" />
+</configuration>
+<!--configuration>
+        <statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener" />
+
+        <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <file>/Users/admin/Documents/workspaces/nns/logback-own-test/access.log</file>
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <fileNamePattern>access.%d{yyyy-MM-dd}.log.zip</fileNamePattern>
+            </rollingPolicy>
+
+            <encoder>
+                <pattern>combined</pattern>
+            </encoder>
+        </appender>
+
+        <appender-ref ref="FILE" />
+</configuration-->
+<!--configuration debug="true">
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.LogstashAccessEncoder">
+            <fieldNames>
+                <requestHeaders>request_headers</requestHeaders>
+            </fieldNames>
+        </encoder>
+    </appender>
+    <appender-ref ref="console"/>
+</configuration-->
+        <!-- always a good activate OnConsoleStatusListener -->
+        <!--statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener" />
+
+        <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>%h %l %u %user %date "%r" %s %b</pattern>
+            </encoder>
+        </appender>
+
+        <appender-ref ref="STDOUT" /-->
